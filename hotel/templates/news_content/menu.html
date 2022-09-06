@@ -1,0 +1,20 @@
+{% load static %}
+
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'main' %}" class="logo mr-auto"><img src="{% static 'hotel/img/logo.svg' %}" alt=""></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="{% url 'main' %}">Главная</a></li>
+          <li><a class="nav-link" href="{% url 'main' %}#about">О нас</a></li>
+          <li><a class="nav-link" href="{% url 'main' %}#services">Сервисы</a></li>
+          <li><a class="nav-link" href="{% url 'main' %}#testimonials">Рекоммендации</a></li>
+          <li><a class="nav-link" href="{% url 'main' %}#contact">Контакты</a></li>
+          <li><a class="nav-link active" href="{% url 'news' %}">Новости</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>

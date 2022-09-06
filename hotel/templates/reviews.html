@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body class="d-flex flex-column">
+
+<!-- ======= Footer ======= -->
+{% include 'reviews_content/menu.html' %}
+<!-- ======= End Footer ======= -->
+<main id="main">
+{% include 'reviews_content/show_reviews.html' %}
+
+{% include 'reviews_content/form.html' %}
+
+</main>
+
+<!-- ======= Footer ======= -->
+{% include 'index_content\footer.html' %}
+<!-- ======= End Footer ======= -->
+
+{% endblock content %}

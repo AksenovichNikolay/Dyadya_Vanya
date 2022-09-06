@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="icon" type="image/svg+xml" href="{% static 'hotel/img/logo_black.svg' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'hotel/css/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'hotel/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'hotel/css/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'hotel/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'hotel/css/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'hotel/css/style.css' %}" rel="stylesheet">
+</head>
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'hotel/js/aos.js' %}"></script>
+    <script src="{% static 'hotel/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'hotel/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'hotel/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'hotel/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'hotel/js/typed.js' %}"></script>
+    <script src="{% static 'hotel/js/validate.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'hotel/js/jquery.maskedinput.min.js' %}"></script>
+    <script src="{% static 'hotel/js/bootstrap.js' %}"></script>
+    
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'hotel/js/main.js' %}"></script>
+
+</body>
+
+</html>

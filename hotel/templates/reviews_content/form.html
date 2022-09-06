@@ -1,0 +1,25 @@
+
+<div class="col-lg-5 col-md-8 mt-3 mb-3 container">
+    <h1 class="text-center">Оставьте ваш отзыв!</h1>
+    <div class="form">
+      <form method="post" role="form" class="call_back_form">
+          {% csrf_token %}
+          <div class="form-group">
+              {{ form.name }}
+          </div>
+          <div class="form-group mt-3">
+              {{ form.star }}
+          </div>
+          <div class="form-group mt-3 user_phone">
+              {{ form.text_review }}
+          </div>
+          <div class="form-group mt-3">
+              {{ form.user_photo_review }}
+          </div>        
+          <div class="text-center mb-3">
+              <button type="submit">Отправить</button>
+          </div>
+
+      </form>
+    </div>
+  </div>

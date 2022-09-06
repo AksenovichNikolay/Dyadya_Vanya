@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body class="d-flex flex-column h-100">
+    <div class="container">
+        <!-- ======= Menu Section ======= -->
+        {% include 'news_content\menu.html' %}
+        <!-- End Menu Section -->
+
+        <div class="row mt-5">
+            <div class="col-3 mt-5">
+                <ul class="nav flex-column nav-pills text-center mb-2" id="myTab" role="tablist">
+                    {% for item in category %}
+                        <li class="nav-item news-nav" role="presentation">
+                        <button class="nav-link btn-get-started col-12 {% if forloop.counter == 1 %}active{% endif %}" id="{{ item.category_name_en }}-tab" data-bs-toggle="tab" data-bs-target="#{{ item.category_name_en }}" 
+                        type="button" role="tab" aria-controls="{{ item.category_name_en }}" aria-selected="true">{{ item.category_name }}</button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-9 mt-5">
+                <div class="tab-content" id="myTabContent">
+                    {% for item in category %}
+                        <div class="tab-pane fade {% if forloop.counter == 1 %}show active{% endif %}" id="{{ item.category_name_en }}" role="tabpanel" aria-labelledby="{{ item.category_name_en }}-tab">
+                            {% include 'news_content/view_news.html' with category_name=item.category_name %}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======= Footer ======= -->
+        {% include 'index_content\footer.html' %}
+        <!-- ======= End Footer ======= -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"> <i class="bi bi-arrow-up-short"></i></a>
+    {% endblock content %}

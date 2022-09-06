@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <div class="container">
+            <!-- ======= Menu Section ======= -->
+            {% include 'news_content\menu.html' %}
+            <!-- End Menu Section -->
+
+            <div class="card mb-3">
+                <img src="{% if news.image_news %}{{ news.image_news.url }}{% endif %}" class="rounded mx-auto d-block img-fluid" alt="...">
+                <div class="card-body">
+                    <h1 class="card-title">{{ news.title|capfirst }}</h1>
+                    <p class="card-text">{{ news.content|safe }}</p>
+                    <p class="card-text"><small class="text-muted">{{ news.issued }}</small></p>
+                </div>
+            </div>
+        <hr>
+        <div class="back-to-news">
+            <a href="{% url 'news'%}">Назад к списку новостей</a>
+        </div><hr>
+    </div>
+    </main>
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"> <i class="bi bi-arrow-up-short"></i></a>
+        
+            <!-- ======= Footer ======= -->
+            {% include 'index_content\footer.html' %}
+            <!-- ======= End Footer ======= -->
+        
+{% endblock content %}

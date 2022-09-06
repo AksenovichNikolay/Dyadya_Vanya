@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<main class="flex-shrink-0 bg-dark">
+    <div class="container">
+        <!-- ======= Menu Section ======= -->
+        {% include 'news_content\menu.html' %}
+        <!-- End Menu Section -->
+
+
+        <img src="{% static 'img/404.png' %}" class="rounded mx-auto d-block img-one-news" alt="...">
+
+    </div>
+</main>
+
+
+{% endblock content %}

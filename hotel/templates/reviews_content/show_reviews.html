@@ -1,0 +1,24 @@
+{% load static %}
+
+<section id="testimonials">
+<div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="section-title">Отзывы</h3>
+        <div class="section-title-divider"></div>
+        <p class="section-description">Самые любимые отзывы о нашей гостиннице</p>
+      </div>
+    </div>
+      {% for review in reviews %}
+      <div class="row">
+          {% if forloop.counter|divisibleby:2 %}
+              {% include 'index_content\text_comment.html' %}
+              {% include 'index_content\img_comment.html' %}
+          {% else %}
+              {% include 'index_content\img_comment.html' %}
+              {% include 'index_content\text_comment.html' %}
+          {% endif %}
+      </div>
+      {% endfor %}
+  </div>
+</section>
